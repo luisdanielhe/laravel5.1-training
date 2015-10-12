@@ -4,4 +4,3 @@ this is a repository with the best practices
 First you need to make:
  -composer install 
  -bower install
- configurate .env
