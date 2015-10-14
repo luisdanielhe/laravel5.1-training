@@ -17,7 +17,7 @@
             </div>
         </div>
     </section>
-    @include('includes.footer')
+    [[--     @include('includes.footer')    --]]
     @include('includes.javascript')
     @yield('javascript')
 </body>

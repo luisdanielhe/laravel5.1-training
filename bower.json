@@ -1,0 +1,21 @@
+{
+  "name": "laravel5.1  training",
+  "version": "0.0.1",
+  "description": "this is a practice for ourself",
+  "authors": [
+    "Luis D. Hernandez"
+  ],
+  "license": "MIT",
+  "homepage": "www.arpa.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "snap.svg": "~0.4.1",
+    "materialize": "~0.97.1"
+  }
+}
