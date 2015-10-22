@@ -17,14 +17,21 @@ class PagesController extends Controller
     public function about()
     {
         $title = 'About';
-        $name = 'Luis';
+        $name = 'you.';
         return view('pages.about', compact('title','name'));
     }
 
     public function contact()
     {
         $title = 'Contact';
-        $name = 'Daniel';
+        $name = 'Stark';
         return view('pages.contact', compact('title','name'));
+    }
+
+     public function practices()
+    {
+        $title = 'Pratices';
+        $name = 'anonymous';
+        return view('pages.practices', compact('title','name'));
     }
 }

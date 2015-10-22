@@ -1,3 +1,24 @@
+nav{
+    padding: 0 20px;
+}
+nav img{
+    max-height: 60px;
+    max-width: 60px;
+}
+pre{
+    font-size: 18px;
+}
+.content{
+    margin: 15px;
+}
 .force-white{
     color: white;
+}
+.contact-form{
+    margin: 30px 20%;
+}
+.indent{
+    text-indent: 20px;
+    text-align: justify;;
+    font-size: 18px;
 }

@@ -1,3 +1,5 @@
     <!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+<script type="text/javascript" src="[[[ asset('vendor/bower_components/jquery/dist/jquery.min.js') ]]]"></script>
+<script type="text/javascript" src="[[[ asset('vendor/bower_components/materialize/dist/js/materialize.min.js') ]]]"></script>
+<script type="text/javascript" src="[[[ asset('vendor/bower_components/angular/angular.min.js') ]]]"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>

@@ -10,11 +10,7 @@
     @include('includes.navbar')
     <section>
         <div class="content">
-            <div class="row">
-                <div class="col-md-12">
-                    @yield('content')
-                </div>
-            </div>
+            @yield('content')
         </div>
     </section>
     [[--     @include('includes.footer')    --]]
