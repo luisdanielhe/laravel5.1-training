@@ -1,3 +1,4 @@
+<div class="content">
     <div class="row left-align">
         <div class="col s12 m12">
             <a href="/practices" class="btn-floating btn-large waves-effect waves-light orange"><i class="material-icons">replay</i></a>
@@ -12,3 +13,4 @@
             <p class="flow-text indent">[[ $practice->description ]]</p>
         </div>
     </div>
+</div>

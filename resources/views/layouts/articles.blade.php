@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>[[ $title ]]</title>
+    <title>[[ $title='Articles' ]]</title>
     @include('includes.head')
     @yield('style')
 </head>
 <body>
-    @include('includes.navbar')
+    @include('includes.navbar', ['articles' => true] )
     <section>
-        <div class="container">
+        <div class="container-articles">
             @yield('content')
         </div>
     </section>
-    [[--     @include('includes.footer')    --]]
+    @include('includes.footer')
     @include('includes.javascript')
     @yield('javascript')
 </body>

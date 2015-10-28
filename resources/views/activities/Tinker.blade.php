@@ -5,7 +5,7 @@
             <blockquote>
                 <p class="flow-text">
                     <pre><code class="prettyprint" >
-php artisan finker
+php artisan tinker
                     </code></pre>
                 </p>
             </blockquote>

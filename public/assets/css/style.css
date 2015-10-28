@@ -8,8 +8,13 @@ nav img{
 pre{
     font-size: 18px;
 }
+.container-articles {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
 .content{
-    margin: 15px;
+    margin: 20px 0;
 }
 .force-white{
     color: white;
@@ -21,4 +26,15 @@ pre{
     text-indent: 20px;
     text-align: justify;;
     font-size: 18px;
+}
+.form-small{
+    max-width: 80%;
+}
+.card-article {
+    height:   200px;
+}
+.article-body p{
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
 }

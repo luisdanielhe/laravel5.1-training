@@ -31,12 +31,17 @@ $people = [ 'Luis', 'Vanita', 'Reni', 'Ricardo', 'Argenis' ]
         </div>
 </div>
 [[-- #### This is a example or activity --]]
-[[--*/  $people = [ 'Luis', 'Vanita', 'Reni', 'Ricardo', 'Argenis' ] /*--]]
-@if (count($people))
-        <ul class="collection with-header">
-            <li class="collection-item"> <h4>People i know more than you</h4></li>
-            @foreach ($people as $person)
-            <li class="collection-item">[[ $person ]]</li>
-            @endforeach
-        </ul>
-@endif
+<div class="row left-align">
+        <div class="col s12 m12">
+
+            [[--*/  $people = [ 'Luis', 'Vanita', 'Reni', 'Ricardo', 'Argenis' ] /*--]]
+
+            @if (count($people))
+                    <ul class="collection with-header">
+                        <li class="collection-item"> <h4>People i know more than you</h4></li>
+                        @foreach ($people as $person)
+                        <li class="collection-item">[[ $person ]]</li>
+                        @endforeach
+                    </ul>
+            @endif
+</div>

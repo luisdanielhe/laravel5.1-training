@@ -3,57 +3,59 @@
 namespace App\Http\Controllers;
 
 use App\Article;
-
-use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Http\Requests\ArticleRequest;
 use App\Http\Controllers\Controller;
+
+use Illuminate\HttpResponse;
 
 class ArticlesController extends Controller
 {
 
     public function index()
     {
-        $articles = Article::all();
-        $title = 'Article';
-        return view('articles.index', compact('articles','title'));
+        $articles = Article::latest()->published()->get();
+        return view( 'articles.index', compact('articles') );
     }
 
 
     public function create()
     {
-        $title = 'Article';
+        return view('articles.create');
 
     }
 
 
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
-        $title = 'Article';
+        Article::create($request->all());
+
+        return redirect('articles');
     }
 
 
     public function show($id)
     {
-        $title = 'Article';
-        $article = Article::find($id);
-        return view('articles.show', compact('article','title'));
+        $article = Article::findOrFail($id);
+        return view('articles.show', compact('article'));
     }
 
 
     public function edit($id)
     {
-        $title = 'Article';
+        $article = Article::findOrFail($id);
+        return view('articles.edit', compact('article'));
     }
 
 
-    public function update(Request $request, $id)
+    public function update(ArticleRequest $request, $id)
     {
-        $title = 'Article';
+        $article = Article::findOrFail($id);
+        $article->update($request->all());
+        return redirect('articles');
     }
-
 
     public function destroy($id)
     {
-        $title = 'Article';
     }
 }
