@@ -11,7 +11,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-// About
+// Pages
 Route::get('/', 'PagesController@welcome');
 Route::get('about', 'PagesController@about');
 Route::get('contact', 'PagesController@contact');
@@ -22,4 +22,10 @@ Route::get('practices/{id}', 'PracticesController@show');
 
 // Articles
 Route::resource('articles', 'ArticlesController');
+
+// Users
+Route::controllers([
+    'auth'      =>  'Auth\AuthController',
+    'password'  =>  'Auth\PasswordController',
+    ]);
 

@@ -1,3 +1,6 @@
+[[-- Temporary --]]
+[!! FORM::hidden('user_id', 1) !!]
+
 <div class="row">
         <div class="input-field col s12">
             [!! FORM::text('title', null, ['class' => 'validate']) !!]

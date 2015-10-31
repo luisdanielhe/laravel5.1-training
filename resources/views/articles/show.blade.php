@@ -18,7 +18,7 @@
                 <p class="flow-text">[[ $article->body ]]</p>
           </div>
           <div class="col s12 m12 l12 small-screen-margin-top right-align">
-                <p>[[ $article->published_at ]]</p>
+                <p>[[ $article->user->name ]] [[ $article->published_at ]]</p>
           </div>
            <div class="fixed-action-btn" style="top: 75px; right: 24px;">
             <a href="/articles/[[ $article->id ]]/edit" class="btn-floating btn-large red">

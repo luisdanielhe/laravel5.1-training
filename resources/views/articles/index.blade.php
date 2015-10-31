@@ -9,13 +9,16 @@
         </div>
     </div>
 </div>
+
 <div class="content">
     <div class="row">
       <div class="col s6">
         <h4 class="truncate">Articles </h4>
       </div>
-      <div class="col s6 right-align">
-        <a href="articles/create" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></a>
+      <div class="fixed-action-btn" style="top: 75px; right: 24px;">
+            <a href="/articles/create" class="btn-floating btn-large green">
+              <i class="large material-icons">add</i>
+            </a>
       </div>
     </div>
 </div>

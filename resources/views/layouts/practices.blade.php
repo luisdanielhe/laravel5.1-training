@@ -13,7 +13,6 @@
             @yield('content')
         </div>
     </section>
-    [[--     @include('includes.footer')    --]]
     @include('includes.javascript')
     @yield('javascript')
 </body>
