@@ -38,3 +38,18 @@ pre{
     margin: 0 auto;
     text-align: justify;
 }
+.container > .tabs{
+    width: 100%;
+}
+.Black{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+.medium{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.regular{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}

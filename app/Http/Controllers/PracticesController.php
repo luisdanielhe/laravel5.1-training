@@ -19,7 +19,7 @@ class PracticesController extends Controller
     }
 
     public function show($id){
-        $practice = Practice::find($id);
+        $practice = Practice::findOrFail($id);
         $title = $practice->title;
         $activity = 'activities.'. $practice->title;
         return view('practices.show', compact('title', 'practice', 'activity'));

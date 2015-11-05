@@ -22,13 +22,10 @@ class ArticlesController extends Controller
         return view( 'articles.index', compact('articles') );
     }
 
-
     public function create()
     {
         return view('articles.create');
-
     }
-
 
     public function store(ArticleRequest $request)
     {
@@ -37,24 +34,19 @@ class ArticlesController extends Controller
         return redirect('articles');
     }
 
-
-    public function show($id)
+    // public function show($id){ $article = Article::findOrFail($id); }
+    public function show(Article $article)
     {
-        $article = Article::findOrFail($id);
         return view('articles.show', compact('article'));
     }
 
-
-    public function edit($id)
+    public function edit(Article $article)
     {
-        $article = Article::findOrFail($id);
         return view('articles.edit', compact('article'));
     }
 
-
-    public function update(ArticleRequest $request, $id)
+    public function update(ArticleRequest $request, Article $article)
     {
-        $article = Article::findOrFail($id);
         $article->update($request->all());
         return redirect('articles');
     }

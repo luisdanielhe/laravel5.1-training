@@ -1,7 +1,7 @@
 <div class="row left-align">
         <div class="col s12 m12">
 
-            <p class="flow-text indent">You need to start with the comand:</p>
+            <p class="flow-text indent">You need to <span class="Black">START</span> with the comand:</p>
             <blockquote>
                 <p class="flow-text">
                     <pre><code class="prettyprint" >
@@ -9,7 +9,7 @@ php artisan tinker
                     </code></pre>
                 </p>
             </blockquote>
-            <p class="flow-text indent">Later you can use its Eloquent's sintaxis normally.</p>
+            <p class="flow-text indent"><span class="Black">LATER</span> you can use its Eloquent's sintaxis normally.</p>
             <p class="flow-text indent">Example:</p>
             <blockquote>
                 <p class="flow-text">
@@ -36,8 +36,8 @@ $practiceUpdate->save();
             </blockquote>
         </div>
         <div class="col s12 m12">
-            <p class="flow-text indent">Other example on console:</p>
+            <p class="flow-text indent"><span class="Black">OTHER EXAMPLE</span> on console:</p>
             <img class="activator z-depth-4 materialboxed" data-caption="A picture of example about Finker on Laravel 5" src="[[[ asset('assets/images/example-finker.jpg') ]]]">
-            <p class="flow-text indent">And the result is the next practice :)</p>
+            <p class="flow-text indent">And the result is the next practice <span class="Black">:)</span></p>
         </div>
 </div>
