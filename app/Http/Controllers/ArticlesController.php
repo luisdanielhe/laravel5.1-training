@@ -1,57 +1,1 @@
-<?php
-
-namespace App\Http\Controllers;
-
-use App\Article;
-use App\Http\Requests;
-use App\Http\Requests\ArticleRequest;
-use App\Http\Controllers\Controller;
-
-use Illuminate\HttpResponse;
-
-class ArticlesController extends Controller
-{
-
-    public function __construct(){
-        $this->middleware('auth', ['only' => 'create']);
-    }
-
-    public function index()
-    {
-        $articles = Article::latest()->published()->get();
-        return view( 'articles.index', compact('articles') );
-    }
-
-    public function create()
-    {
-        return view('articles.create');
-    }
-
-    public function store(ArticleRequest $request)
-    {
-        $article= new Article($request->all());
-        Auth::user()->articles()->save($artticle);
-        return redirect('articles');
-    }
-
-    // public function show($id){ $article = Article::findOrFail($id); }
-    public function show(Article $article)
-    {
-        return view('articles.show', compact('article'));
-    }
-
-    public function edit(Article $article)
-    {
-        return view('articles.edit', compact('article'));
-    }
-
-    public function update(ArticleRequest $request, Article $article)
-    {
-        $article->update($request->all());
-        return redirect('articles');
-    }
-
-    public function destroy($id)
-    {
-    }
-}
+<?phpnamespace App\Http\Controllers;use App\Article;use App\Tag;use App\Http\Requests;use App\Http\Requests\ArticleRequest;use App\Http\Controllers\Controller;use Illuminate\HttpResponse;use Illuminate\Support\Facades\Auth;class ArticlesController extends Controller{    public function __construct(){        $this->middleware('auth', ['only' => 'create']);    }    public function index()    {        $articles = Article::latest()->published()->get();        return view( 'articles.index', compact('articles') );    }    public function create()    {        $tags = Tag::lists('name', 'id');        return view('articles.create', compact('tags'));    }    public function store(ArticleRequest $request)    {        $this->createArticle($request);        return redirect('articles')->with('flash_message');    }    // public function show($id){ $article = Article::findOrFail($id); }    public function show(Article $article)    {        return view('articles.show', compact('article'));    }    public function edit(Article $article)    {        $tags = Tag::lists('name', 'id');        return view('articles.edit', compact('article','tags'));    }    public function update(ArticleRequest $request, Article $article)    {        $article->update($request->all());        $this->syncTags($article, $request->input('tag_list'));        return redirect('articles');    }    public function destroy($id)    {    }    private function syncTags(Article $article, array $tags)    {        $article->tags()->sync($tags);    }    private function createArticle(ArticleRequest  $request)    {        $article = Auth::user()->articles()->create($request->all());        $this->syncTags($article, $request->input('tag_list'));        return $article;    }}

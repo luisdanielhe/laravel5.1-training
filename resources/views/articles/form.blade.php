@@ -14,9 +14,15 @@
         </div>
     </div>
     <div class="row">
-        <div class=" col s12">
+        <div class="col s12">
             [!! FORM::label('published_at', 'Published on:') !!]
             [!! FORM::input('date', 'published_at', date('Y-m-d'), null, ['class' => 'validate']) !!]
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            [!! FORM::label('tag_list', 'Tags:') !!]
+            [!! FORM::select('tag_list[]', $tags, null, ['class' => 'browser-default', 'multiple', 'style'=> 'height: 100%;']) !!]
         </div>
     </div>
     <div class="row center-align">

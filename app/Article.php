@@ -3,7 +3,6 @@
 namespace App;
 
 use Carbon\Carbon;
-
 use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
@@ -31,8 +30,19 @@ class Article extends Model
     {
         $this->attributes['published_at'] = Carbon::parse($date);
     }
+
     public function user()
     {
         return $this->belongsTo('App\User');
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag');
+    }
+
+    public function getTagListAttribute()
+    {
+        return $this->tags->lists('id');
     }
 }

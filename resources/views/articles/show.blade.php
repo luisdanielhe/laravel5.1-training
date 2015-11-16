@@ -26,5 +26,17 @@
             </a>
           </div>
   </div>
+  @unless ($article->tags->isEmpty())
+    <div class="row">
+       <div class="col s12 m12 l12 small-screen-margin-top center-align">
+              <h4>Tags:</h4>
+        </div>
+        <div class="col s12 m12 l12 small-screen-margin-top article-body ">
+              @foreach ($article->tags as $tag)
+                <p class="flow-text">[[ $tag->name ]]</p>
+              @endforeach
+        </div>
+    </div>
+  @endunless
 </div>
 @stop

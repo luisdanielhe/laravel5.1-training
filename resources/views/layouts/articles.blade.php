@@ -10,6 +10,7 @@
     @include('includes.navbar', ['articles' => true] )
     <section>
         <div class="container-articles">
+            @include('flash::message')
             @yield('content')
         </div>
     </section>
