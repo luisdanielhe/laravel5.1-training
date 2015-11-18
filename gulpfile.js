@@ -12,9 +12,34 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    //mix.sass('app.scss' , 'resources/assets/css');
+    mix.copy([
+        'public/vendor/bower_components/materialize/dist/css/materialize.css',
+        'public/vendor/bower_components/select2/dist/css/select2.css',
+        'public/assets/css/style.css'
+        ], 'resources/assets/css');
+    mix.copy([
+        'public/vendor/bower_components/materialize/dist/font'
+        ], 'public/font/');
+    mix.styles([
+        'materialize.css',
+        'select2.css',
+        'style.css',
+        //'app.css'
+        ], 'public/css');
 
-    mix.sass([ '/vendor/bower_components/materialize/sass/materialize.scss', 'app.scss' ], null, 'public/css');
 
-    mix.version( 'public/css/all.css' );
+     mix.copy([
+        'public/vendor/bower_components/jquery/dist/jquery.js',
+        'public/vendor/bower_components/materialize/dist/js/materialize.js',
+        'public/vendor/bower_components/select2/dist/js/select2.js',
+        'public/vendor/bower_components/angular/angular.js'
+        ], 'resources/assets/js');
+    mix.scripts([
+        'jquery.js',
+        'materialize.js',
+        'select2.js',
+        'angular.js',
+        //'style.js',
+        ], 'public/js');
 });

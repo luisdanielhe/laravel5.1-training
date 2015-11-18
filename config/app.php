@@ -146,8 +146,15 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Laracast Service Providers...
+         */
         Laracasts\Flash\FlashServiceProvider::class,
 
+        /*
+         * Extra-Application Service Providers...
+         */
+        App\Providers\ViewComposerServiceProvider::class,
     ],
 
     /*

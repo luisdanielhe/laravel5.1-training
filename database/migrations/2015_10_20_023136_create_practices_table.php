@@ -16,8 +16,9 @@ class CreatePracticesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('description');
-            $table->timestamps();
             $table->timestamp('published_at');
+            $table->timestamps();
+
         });
     }
 

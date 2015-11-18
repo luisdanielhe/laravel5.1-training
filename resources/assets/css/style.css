@@ -1,0 +1,55 @@
+nav{
+    padding: 0 20px;
+}
+nav img{
+    max-height: 60px;
+    max-width: 60px;
+}
+pre{
+    font-size: 18px;
+}
+.container-articles {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+.content{
+    margin: 20px 0;
+}
+.force-white{
+    color: white;
+}
+.contact-form{
+    margin: 30px 20%;
+}
+.indent{
+    text-indent: 20px;
+    text-align: justify;;
+    font-size: 18px;
+}
+.form-small{
+    max-width: 80%;
+}
+.card-article {
+    height:   240px;
+}
+.article-body p{
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+}
+.container > .tabs{
+    width: 100%;
+}
+.Black{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+.medium{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.regular{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}

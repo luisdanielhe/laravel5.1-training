@@ -21,8 +21,9 @@
     </div>
     <div class="row">
         <div class="col s12">
+            [[  $article->tags->lists('name') ]]
             [!! FORM::label('tag_list', 'Tags:') !!]
-            [!! FORM::select('tag_list[]', $tags, null, ['class' => 'browser-default', 'multiple', 'style'=> 'height: 100%;']) !!]
+            [!! FORM::select('tag_list[]', $tags, $article->tags->lists('id'), ['id' => 'tag_list', 'class' => 'browser-default', 'multiple']) !!]
         </div>
     </div>
     <div class="row center-align">
@@ -30,3 +31,10 @@
             [!! FORM::submit($submitButtonText, ['class' => 'btn']) !!]
         </div>
 </div>
+@section('javascript')
+    <script type="text/javascript">
+        $('#tag_list').select2({
+            placeholder: 'Choose a tag'
+        });
+    </script>
+@stop

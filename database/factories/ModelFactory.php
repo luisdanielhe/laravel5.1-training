@@ -25,13 +25,19 @@ $factory->define(App\Practice::class, function (Faker\Generator $faker) {
     return [
         'title'          => $faker->sentence($nbWords = 4),
         'description'    => $faker->paragraph($nbSentences = 3),
-        'published_at'   => $faker->dateTime($max = 'now')
+        'published_at'   => $faker->dateTime($max = 'now'),
+    ];
+});
+
+$factory->define(App\Tag::class, function (Faker\Generator $faker) {
+    return [
+        'name'        => $faker->word,
     ];
 });
 
 $factory->define(App\Article::class, function (Faker\Generator $faker) {
     return [
-        'user_id'        => $faker->numberBetween($min = 2, $max = 11),
+        'user_id'        => $faker->numberBetween($min = 1, $max = 10),
         'title'          => $faker->sentence($nbWords = 4),
         'body'           => $faker->paragraph($nbSentences = 3),
         'published_at'   => $faker->date($format = 'Y-m-d', $max = 'now')
